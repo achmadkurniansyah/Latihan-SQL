@@ -1,0 +1,152 @@
+create database perpustakaan;
+use perpustakaan;
+
+create table Anggota ( Nama varchar (50), ID_Anggota int (6) ,  NomorHP int (15), Fakultas varchar (50));
+	insert into Anggota values ("Anjani",112345,0836789068,"Kedokteran");
+    insert into Anggota values ("Septiani",212347,0856842578,"Teknik Elektro");
+    insert into Anggota values ("Rizki",312355,0836789834,"Teknik Industri");
+    insert into Anggota values ("Sandra",114565,0825856434,"Kedokteran");
+    insert into Anggota values ("kiki",413545,08167943,"Hukum");
+    insert into Anggota values ("Ica",112895,0816794368,"Kedokteran");
+    insert into Anggota values ("Sabrina",118345,0827653467,"Kedokteran");
+    insert into Anggota values ("Rara",115645,0856792345,"Kedokteran");
+    insert into Anggota values ("Alin",418845,0816785632,"Hukum");
+    insert into Anggota values ("Putri",418745,082563567,"Hukum");
+	insert into Anggota values ("Pangestu",413765,08163775,"Hukum");
+    insert into Anggota values ("Alex",216787,081568797,"Teknik Elektro");
+    insert into Anggota values ("Beta",216747,0816793268,"Teknik Elektro");
+	insert into Anggota values ("Tata",217867,08567894,"Teknik Elektro");
+    insert into Anggota values ("Berlian",212897,082348365,"Teknik Elektro");
+    insert into Anggota values ("Anggita",37855,0812572536,"Teknik Industri");
+    insert into Anggota values ("Indah",316755,081678356256,"Teknik Industri");
+    insert into Anggota values ("Elda",314555,0815268635,"Teknik Industri");
+    insert into Anggota values ("Essy",512355,0815687426,"Teknik Sipil");
+    insert into Anggota values ("Destarella",512775,08278937,"Teknik Sipil");
+
+create table PengembalianBuku (Rak varchar (50) , ID_Buku int (50) , ID_Petugas int (100));
+	insert into PengembalianBuku VALUES ('1A',1,1) ;
+	insert into PengembalianBuku VALUES ('2A',2,1) ;
+	insert into PengembalianBuku VALUES ('3A',3,1) ;
+	insert into PengembalianBuku VALUES ('1B',4,1) ;
+	insert into PengembalianBuku VALUES ('2B',5,1) ;
+	insert into PengembalianBuku VALUES ('1A',6,2) ;
+	insert into PengembalianBuku VALUES ('2A',7,2);
+	insert into PengembalianBuku VALUES ('3A',8,2);
+	insert into PengembalianBuku VALUES ('1B',9,2);
+	insert into PengembalianBuku VALUES ('2B',10,3);
+	insert into PengembalianBuku VALUES ('1A',11,3);
+	insert into PengembalianBuku VALUES ('2A',12,3);
+	insert into PengembalianBuku VALUES ('3A',13,3);
+	insert into PengembalianBuku VALUES ('1B',14,3);
+	insert into PengembalianBuku VALUES ('2B',15,4);
+	insert into PengembalianBuku VALUES ('1A',16,4);
+	insert into PengembalianBuku VALUES ('2A',17,4);
+	insert into PengembalianBuku VALUES ('3A',18,4);
+	insert into PengembalianBuku VALUES ('1B',19,4);
+	insert into PengembalianBuku VALUES ('2B',20,5);
+
+create table DaftarBuku (ID_Buku int (20), Rak Varchar (50) , TahunTerbit int (10));
+	insert into DaftarBuku values (1,'1A',1999);
+	insert into DaftarBuku values (2,'2A',1989);
+    insert into DaftarBuku values (3,'3A',1987);
+    insert into DaftarBuku values (4,'1B',2000);
+    insert into DaftarBuku values (5,'2B',2003);
+    insert into DaftarBuku values (6,'3B',2000);
+    insert into DaftarBuku values (7,'3B',2001);
+    insert into DaftarBuku values (8,'1A',2009);
+	insert into DaftarBuku values (9,'2A',2010);
+    insert into DaftarBuku values (10,'3A',2009);
+    insert into DaftarBuku values (11,'1B',2010);
+    insert into DaftarBuku values (12,'2B',2011);
+    insert into DaftarBuku values (13,'3B',2012);
+    insert into DaftarBuku values (14,'3B',2011);
+    insert into DaftarBuku values (15,'3A',2014);
+    insert into DaftarBuku values (16,'3B',2020);
+    insert into DaftarBuku values (17,'2B',2001);
+    insert into DaftarBuku values (18,'3A',2009);
+    insert into DaftarBuku values (19,'2A',2010);
+    insert into DaftarBuku values (20,'3B',2019);
+
+create table PeminjamanBuku (Rak varchar (50) ,NIK varchar(50),ID_Buku int (50) , ID_Petugas int (100));
+	insert into PeminjamanBuku VALUES ('1A','201511001',1,1);
+	insert into PeminjamanBuku VALUES ('2A','201511002',2,1);
+	insert into PeminjamanBuku VALUES ('3A','201511001',3,1);
+	insert into PeminjamanBuku VALUES ('1B','201511003',4,1);
+	insert into PeminjamanBuku VALUES ('2B','201511005',5,1);
+	insert into PeminjamanBuku VALUES ('1A','201511344',6,2);
+	insert into PeminjamanBuku VALUES ('2A','201511222',7,2);
+	insert into PeminjamanBuku VALUES ('3A','201511123',8,2);
+	insert into PeminjamanBuku VALUES ('1B','201511254',9,2);
+	insert into PeminjamanBuku VALUES ('2B','201511114',10,3);
+	insert into PeminjamanBuku VALUES ('1A','201511099',11,3);
+	insert into PeminjamanBuku VALUES ('2A','201511781',12,3);
+	insert into PeminjamanBuku VALUES ('3A','201511512',13,3);
+	insert into PeminjamanBuku VALUES ('1B','201511011',14,3);
+	insert into PeminjamanBuku VALUES ('2B','201511071',15,4);
+	insert into PeminjamanBuku VALUES ('1A','201511081',16,4);
+	insert into PeminjamanBuku VALUES ('2A','201511233',17,4);
+	insert into PeminjamanBuku VALUES ('3A','201511200',18,4);
+	insert into PeminjamanBuku VALUES ('1B','201511123',19,4);
+	insert into PeminjamanBuku VALUES ('2B','201511432',20,5);
+
+create table Petugas (Nama varchar (50) ,ID_Petugas int(100), Usia int (50));
+	insert into Petugas values ("Rara", 1 , 20);
+    insert into Petugas values ("Rere", 1 , 23);
+    insert into Petugas values ("Angga", 2 , 19);
+    insert into Petugas values ("Rani", 2 , 20);
+    insert into Petugas values ("Aisyah", 1 , 24);
+    insert into Petugas values ("Nana", 3 , 20);
+    insert into Petugas values ("Dodo", 3 , 25);
+    insert into Petugas values ("Putri", 4 , 22);
+    insert into Petugas values ("Rara", 1 , 20);
+    insert into Petugas values ("Agnes", 5 , 20);
+    insert into Petugas values ("Andi", 5 , 25);
+    insert into Petugas values ("Meysha", 4 , 20);
+    insert into Petugas values ("frans", 5 , 23);
+    insert into Petugas values ("Tata", 4 , 22);
+    insert into Petugas values ("Farhan", 2 , 20);
+    insert into Petugas values ("kiki", 3, 19);
+    insert into Petugas values ("Andre", 2 , 20);
+    insert into Petugas values ("Bayu", 3 , 25);
+    insert into Petugas values ("Raisa", 4 , 20);
+    insert into Petugas values ("Marni", 3 , 26);
+    insert into Petugas values ("Galang", 2 , 25);
+    
+-- Soal 2.1
+show tables;
+select * from petugas;
+select count(Nama),min(length(Fakultas)),max(length(Fakultas)),avg(length(Fakultas)), length(Nama) from anggota;
+select count(Rak),min(TahunTerbit),max(TahunTerbit),round(avg(TahunTerbit)) from daftarbuku; -- Mas maaf lupa ngga ada stringnya 
+select count(ID_Petugas),min(NIK),max(NIK),round(avg(NIK)),length(NIK) from peminjamanbuku;
+select count(Rak),min(ID_Buku),max(ID_Buku),round(avg(ID_Buku)) from pengembalianbuku; -- mas lupa juga ngga ngasih str
+select count(Nama),min(Usia),max(Usia),Round(avg(usia)),length(Nama) from petugas;
+-- Soal 2.2
+select count(*),NIK from peminjamanbuku group by NIK;
+select count(*),Usia from petugas group by Usia;
+show databases;
+use world;
+show tables;
+
+-- soal 3
+use employees;
+show tables;
+select * from employees;
+select count(gender),gender from employees group by gender; -- utk kesetaraan gender pekerjaan
+select min(hire_date) from employees; -- utk memberikan reward pekerja terlama
+select max(hire_date) from employees;
+select birth_date, count(birth_date) from employees group by birth_date;
+select distinct first_name from employees order by first_name;
+
+select * from departments; -- hanya 2 kolom
+select dept_name from departments order by dept_name;
+select dept_name from departments where dept_name like "%R%";
+select dept_name,dept_no from departments group by dept_no;
+
+select * from dept_emp;
+select min(from_date),dept_no from dept_emp group by emp_no;
+select max(from_date),dept_no from dept_emp group by emp_no;
+select min(to_date),dept_no from dept_emp group by emp_no;
+select max(to_date),dept_no from dept_emp group by emp_no;
+select from_date,emp_no from dept_emp group by emp_no;
+
+
