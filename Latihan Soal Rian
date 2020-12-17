@@ -1,0 +1,117 @@
+--RIAN ZELMI BACHRI
+
+-- SOAL 1
+-- No. 1
+use latihan;
+create table toko(
+Nomor int,
+NamaToko varchar (300),
+OmzetTahunan int);
+Alter table toko add DomisiliToko varchar (300);
+create table pegawai(
+NomorID int,
+Nama varchar (300),
+LamaBekerjaDalamTahun int,
+GajiBulanan int,
+JenisKelamin varchar (300));
+create table penjualankendaraan(
+NomorID int,
+Merk varchar (300),
+Tipe varchar (300),
+JenisKendaraan int,
+Harga int);
+alter table penjualankendaraan modify JenisKendaraan varchar (300);
+create table domisilipegawai(
+NomorID int,
+Nama varchar (300),
+JarakRumahKeKantorDalamKm int,
+domisili varchar (300));
+create table pegawai(
+NomorID int,
+Nama varchar (300),
+LamaBekerjaDalamTahun int,
+GajiBulanan int,
+JenisKelamin varchar (300));
+create table jenisusahatoko(
+Nomor int,
+NamaToko varchar (300),
+OmzetTahunan int,
+JenisUsaha varchar (300));
+
+-- No. 2
+use latihan;
+show tables;
+-- toko
+insert into toko values (1, 'Sinar Jaya', 1000000000, 'Bekasi');
+insert into toko values (2, 'Harapan Jaya', 950000000, 'Depok');
+insert into toko values (3, 'Pesona Indah', 1100000000, 'Depok');
+insert into toko values (4, 'Sinar Abadi', 1150000000, 'Bekasi');
+insert into toko values (5, 'Makmur Jaya', 1500000000, 'Jakarta');
+insert into toko values (6, 'Jaya Sentosa', 1400000000, 'Jakarta');
+insert into toko values (7, 'Sinar Makmur', 980000000, 'Bogor');
+insert into toko values (8, 'Harapan Bangsa', 1200000000, 'Tangerang');
+insert into toko values (9, 'Pesona Jaya', 1250000000, 'Bekasi');
+insert into toko values (10, 'Sinar Mentari', 1350000000, 'Bogor');
+-- jenisusahatoko
+insert into jenisusahatoko values (1, 'Sinar Jaya', 1000000000, 'Fashion');
+insert into jenisusahatoko values (2, 'Harapan Jaya', 950000000, 'Food n Beverages');
+insert into jenisusahatoko values (3, 'Pesona Indah', 1100000000, 'Technology');
+insert into jenisusahatoko values (4, 'Sinar Abadi', 1150000000, 'Fashion');
+insert into jenisusahatoko values (5, 'Makmur Jaya', 1500000000, 'Technology');
+insert into jenisusahatoko values (6, 'Jaya Sentosa', 1400000000, 'Fashion');
+insert into jenisusahatoko values (7, 'Sinar Makmur', 980000000, 'Food n Beverages');
+insert into jenisusahatoko values (8, 'Harapan Bangsa', 1200000000, 'Furniture');
+insert into jenisusahatoko values (9, 'Pesona Jaya', 1250000000, 'Furniture');
+insert into jenisusahatoko values (10, 'Sinar Mentari', 1350000000, 'Food n Beverages');
+-- pegawai
+insert into pegawai values (1001, 'Rian', 3, 5000000, 'Pria');
+insert into pegawai values (1002, 'Zelmi', 2, 4500000, 'Pria');
+insert into pegawai values (1003, 'Bachri', 2, 4500000, 'Pria');
+insert into pegawai values (1004, 'Arum', 1, 4000000, 'Wanita');
+insert into pegawai values (1005, 'Aura', 2, 4500000, 'Pria');
+insert into pegawai values (1006, 'Eksa', 5, 6000000, 'Pria');
+insert into pegawai values (1007, 'Tari', 4, 5500000, 'Wanita');
+insert into pegawai values (1008, 'Reza', 4, 5500000, 'Pria');
+insert into pegawai values (1009, 'Dhieta', 2, 4500000, 'Wanita');
+insert into pegawai values (1010, 'Dina', 3, 5000000, 'Wanita');
+-- domisilipegawai
+insert into domisilipegawai values (1001, 'Rian', 23, 'Depok');
+insert into domisilipegawai values (1002, 'Zelmi', 22, 'Depok');
+insert into domisilipegawai values (1003, 'Bachri', 12, 'Jakarta');
+insert into domisilipegawai values (1004, 'Arum', 36, 'Bogor');
+insert into domisilipegawai values (1005, 'Aura', 32, 'Bogor');
+insert into domisilipegawai values (1006, 'Eksa', 25, 'Bekasi');
+insert into domisilipegawai values (1007, 'Tari', 14, 'Jakarta');
+insert into domisilipegawai values (1008, 'Reza', 29, 'Bekasi');
+insert into domisilipegawai values (1009, 'Dhieta', 36, 'Bogor');
+insert into domisilipegawai values (1010, 'Dina', 25, 'Depok');
+-- penjualankendaraan
+insert into penjualankendaraan values (1001, 'Honda', 'CRV', 'Mobil', 400000000);
+insert into penjualankendaraan values (1002, 'Honda', 'Beat', 'Motor', 13000000);
+insert into penjualankendaraan values (1003, 'Toyota', 'Corolla', 'Mobil', 600000000);
+insert into penjualankendaraan values (1004, 'Yamaha', 'Vixion', 'Motor', 20000000);
+insert into penjualankendaraan values (1005, 'Honda', 'Kijang Innova', 'Mobil', 500000000);
+insert into penjualankendaraan values (1006, 'Toyota', 'Avanza', 'Mobil', 200000000);
+insert into penjualankendaraan values (1007, 'Yamaha', 'Xeon', 'Motor', 14000000);
+insert into penjualankendaraan values (1008, 'Yamaha', 'Mio', 'Motor', 12000000);
+insert into penjualankendaraan values (1009, 'Honda', 'Freed', 'Mobil', 350000000);
+insert into penjualankendaraan values (1010, 'Honda', 'Vario', 'Motor', 'Depok');
+
+-- SOAL 2
+
+-- No. 1
+select * from toko;
+select count(NamaToko) as jumlahdata, (select max(OmzetTahunan)) as OmzetTerbesar,
+(select min(OmzetTahunan)) as OmzetTerkecil, (select round(avg(OmzetTahunan),2)) as ratarataOmzet, (select sum(OmzetTahunan)) as JumlahOmzet
+from toko;
+
+-- No. 2
+-- mencari rata rata omzet tahunan toko berdasarkan domisili
+select DomisiliToko, (select round(avg(OmzetTahunan))) as RataRataOmzet from toko group by DomisiliToko;
+
+-- mencari jumlah gaji pegawai wanita dan pria
+select * from pegawai;
+select JenisKelamin, (select sum(GajiBulanan)) as JumlahGaji from pegawai group by JenisKelamin;
+
+
+-- MAS SAYA BARU SAMPAI SINI, TERUS DATANYA CUMA SEGITU KARNA SAYA SUDAH NGANTUK BANGET MAS MAAF. SAYA KUMPULIN SEADANYA DULU TAKUTNYA SAYA KETIDURAN DAN MALAH GA NGUMPULIN TKS MAS
